@@ -1,11 +1,22 @@
 """
 Data Preprocessing:
 To deal with the high amount of data:
-- Firstly we split the data set into 18 parts as it contained a total of 182.342.304 rows - to make its preprocessing first steps in a manageable way for our computacional resources.
-- Afterwards, we removed the string part of the variables ProductFamily_ID, ProductCategory_ID, ProductBrand_ID, ProductName_ID, ProductPackSKU_ID and Sale_ID - keeping only the number part and converting the variables to integer type.
-- Then, we checked for missing values - it didn't contain any.
-- Our dataset contained duplicated rows whose only diference between them was: one had the value for the category 'Sell-out units' and another for 'Sell-out values' - to avoid having unnecessary repeated information, we collapsed these informations creating two new variables ('Sell-out units' and 'Sell-out values'), which allowed us to reduce our datasets size to around half of its original size.
-- Next, we concatened our datasets into a single one - with this process we managed to reduce the df size from ~18GB to 4.6GB
+ -> Firstly, when reading the data, we divided it into 18 parts to make its preparation first steps in a manageable way in terms of memory usage. 
+ 
+ -> Afterwards, we removed the string part of the variables ProductFamily_ID, ProductCategory_ID, ProductBrand_ID, ProductName_ID, ProductPackSKU_ID, 
+ and Sale_ID, as it did not provide useful information, keeping only the number part of these fields. Naturally, after his step, we converted the variables 
+ to an integer type. 
+ 
+ -> Then, we checked for missing values and concluded that it does not contain any. 
+ 
+ -> Hereafter, since our dataset contained duplicated rows which only difference between them was that one had the value for the category Sell-out units and 
+ another for Sell-out values (and with the purpose to avoid having unnecessary repeated information), we collapsed this information, that is, we merged the 
+ columns Measure and Value, creating two new variables (Sell-out units and Sell-out values), which allowed us to reduce the size of each of our auxiliar 
+ datasets to around half of its original size. 
+ 
+ -> Next, we concatenated several datasets into one. 
+ 
+>>> With this process we managed to reduce the initial dataset size from ~18GB to 4.6GB
 """
 import pandas as pd
 import swifter
@@ -44,7 +55,6 @@ for i in range(9,18):
     print(name+' done!'+ ' In '+"--- %s seconds ---" % (time.time() - start_time))
     
 PROJECT_ROOT = r"C:\Users\Utilizador\OneDrive - NOVAIMS\2º Semester\Business Cases with Data Science\PROJETOS\Business_Case_5"
-#Path(os.path.abspath('')).resolve().parents[0]
 
 files = ['df_'+str(i)+'.csv' for i in range(18)]    
 df_preprocessed = pd.DataFrame()
