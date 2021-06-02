@@ -1,6 +1,7 @@
 """
-Data Preprocessing:
-To deal with the high amount of data:
+**Authorship: Catarina Candeias, Catarina Urbano, Margarida Pereira and Rita Ferreira**
+
+DATA PREPROCESSING (To deal with the high amount of data):
  -> Firstly, when reading the data, we divided it into 18 parts to make its preparation first steps in a manageable way in terms of memory usage. 
  
  -> Afterwards, we removed the string part of the variables ProductFamily_ID, ProductCategory_ID, ProductBrand_ID, ProductName_ID, ProductPackSKU_ID, 
