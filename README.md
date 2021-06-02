@@ -1,4 +1,4 @@
-# Business_Case_5
+# Business Case 5
     *Authorship* (Nova IMS students):
      Catarina Candeias
      Catarina Urbano
