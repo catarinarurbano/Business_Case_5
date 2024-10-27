@@ -1,11 +1,5 @@
-# Business Case 5
-    *Authorship* (Nova IMS students):
-     Catarina Candeias
-     Catarina Urbano
-     Margarida Pereira
-     Rita Ferreira
-     
-#### Objectives:
+## Project Overview
+
   *Mind Over Data* is a Data Science and Advanced Analytics boutique consultancy that operates in cross industries and on different geographies like Europe, Australia and Brazil. This company provides tailor-made Advanced Analytics solutions for companies worldwide. 
 
   The main objectives of the company are the understanding of the characteristics for each point of sales, the perception of the different types of point of sales, that is, the characteristics that represent them, the identification of product preferences and the deployment of solutions and strategies for the different findings, being a crucial point to do a 6-week product forecast for each point of sale. 
